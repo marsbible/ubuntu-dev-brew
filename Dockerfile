@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 MAINTAINER kevin ma <redshift@outlook.com>
 
 RUN apt-get update \
-  && apt-get install -y build-essential sudo curl file git vim openssl \
+  && apt-get install -y build-essential python sudo curl file git vim openssl \
   && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
   && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
   && useradd --create-home --shell /bin/bash linuxbrew -G sudo \
