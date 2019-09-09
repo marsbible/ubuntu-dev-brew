@@ -41,13 +41,5 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/mast
   && brew install gcc \
   && brew install jemalloc \
   && brew install folly \
-  && brew install gperf \
-  && curl -fsSL https://raw.githubusercontent.com/marsbible/linuxbrew-core/fbthrift/Formula/rsocket-cpp.rb -o /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core/Formula/rsocket-cpp.rb \
-  && curl -fsSL https://raw.githubusercontent.com/marsbible/linuxbrew-core/fbthrift/Formula/fmt.rb -o /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core/Formula/fmt.rb \
-  && curl -fsSL https://raw.githubusercontent.com/marsbible/linuxbrew-core/fbthrift/Formula/fizz.rb -o /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core/Formula/fizz.rb \
-  && curl -fsSL https://raw.githubusercontent.com/marsbible/linuxbrew-core/fbthrift/Formula/wangle.rb -o /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core/Formula/wangle.rb \
-  && curl -fsSL https://raw.githubusercontent.com/marsbible/linuxbrew-core/fbthrift/Formula/fbthrift.rb -o /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core/Formula/fbthrift.rb \
-  && curl -fsSL https://raw.githubusercontent.com/marsbible/linuxbrew-core/fbthrift/Formula/proxygen.rb -o /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core/Formula/proxygen.rb \
-  && brew install fbthrift \
-  && brew install proxygen
+  && brew install gperf
 
