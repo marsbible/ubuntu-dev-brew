@@ -41,5 +41,7 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/mast
   && brew install gcc \
   && brew install jemalloc \
   && brew install folly \
-  && brew install gperf
+  && brew install gperf \
+  && curl -fsSL https://github.com/marsbible/ccls/archive/v2019.08.23.tar.gz -o /home/linuxbrew/v2019.08.23.tar.gz \
+  && cd /home/linuxbrew && tar -xzvf v2019.08.23.tar.gz && cd ccls-2019.08.23 && sh install.sh
 
