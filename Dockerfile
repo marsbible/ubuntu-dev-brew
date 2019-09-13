@@ -8,7 +8,9 @@ RUN apt-get update \
   && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
   && useradd --create-home --shell /bin/bash linuxbrew -G sudo \
   && echo "linuxbrew:linuxbrew" | chpasswd \
-  && apt-get clean
+  && apt-get clean \
+  && curl -fsSL https://github.com/marsbible/ccls/archive/v2019.08.23.tar.gz -o ./v2019.08.23.tar.gz \
+  && tar -xzvf v2019.08.23.tar.gz && cd ccls-2019.08.23 && sh install.sh
 
 USER linuxbrew 
 WORKDIR /home/linuxbrew
@@ -41,7 +43,5 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/mast
   && brew install gcc \
   && brew install jemalloc \
   && brew install folly \
-  && brew install gperf \
-  && curl -fsSL https://github.com/marsbible/ccls/archive/v2019.08.23.tar.gz -o /home/linuxbrew/v2019.08.23.tar.gz \
-  && cd /home/linuxbrew && tar -xzvf v2019.08.23.tar.gz && cd ccls-2019.08.23 && sh install.sh
+  && brew install gperf
 
