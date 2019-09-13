@@ -3,14 +3,14 @@ FROM ubuntu:16.04
 MAINTAINER kevin ma <redshift@outlook.com>
 
 RUN apt-get update \
-  && apt-get install -y build-essential gdb python sudo curl file git vim openssl \
+  && apt-get install -y build-essential gdb wget python sudo curl file git vim openssl \
   && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
   && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
   && useradd --create-home --shell /bin/bash linuxbrew -G sudo \
   && echo "linuxbrew:linuxbrew" | chpasswd \
   && apt-get clean \
-  && curl -fsSL https://github.com/marsbible/ccls/archive/v2019.08.23.tar.gz -o ./v2019.08.23.tar.gz \
-  && tar -xzvf v2019.08.23.tar.gz && cd ccls-2019.08.23 && sh install.sh
+  && curl -fsSL https://github.com/marsbible/ccls/archive/v1.0.1.tar.gz -o ./v1.0.1.tar.gz \
+  && tar -xzvf v1.0.1.tar.gz && cd ccls-1.0.1 && sh install.sh
 
 USER linuxbrew 
 WORKDIR /home/linuxbrew
