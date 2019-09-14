@@ -9,8 +9,8 @@ RUN apt-get update \
   && useradd --create-home --shell /bin/bash linuxbrew -G sudo \
   && echo "linuxbrew:linuxbrew" | chpasswd \
   && apt-get clean \
-  && curl -fsSL https://github.com/marsbible/ccls/archive/v1.0.1.tar.gz -o ./v1.0.1.tar.gz \
-  && tar -xzvf v1.0.1.tar.gz && cd ccls-1.0.1 && sh install.sh
+  && curl -fsSL https://github.com/marsbible/ccls/archive/v1.0.2.tar.gz -o ./v1.0.2.tar.gz \
+  && tar -xzvf v1.0.2.tar.gz && cd ccls-1.0.2 && sh install.sh
 
 USER linuxbrew 
 WORKDIR /home/linuxbrew
